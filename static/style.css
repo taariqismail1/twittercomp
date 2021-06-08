@@ -87,8 +87,8 @@ textarea {
 */
 
 .btn {
+    -webkit-appearance: none;	
     background-color: rgb(84, 105, 212);
-   
     color: #fff;
     font-weight: 600;
     cursor: pointer;
