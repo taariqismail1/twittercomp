@@ -14,8 +14,9 @@
       {% if winners %}
         <br>
         <h3>Results</h3>
-      <p class="message" style=" background: #E3EFFF;">{{ winners | safe }}</p>
-      {% endif %}
+            <p><span class="tooltiptext" id="myTooltip" style="display:none;"></span></p>
+      <p class="message" id="myInput" style=" background: #E3EFFF;"><button type="button" class ="copy-icon" onclick = "copyText()"></button>{{ winners | safe }}</p>
+             {% endif %}
          </div>
         <div>
         <form action="/">
@@ -23,6 +24,48 @@
             </div>
 </form>
      </div>
-     
+     <p  class="normal">Winners are drawn from the last 100 retweets or likes. This is a limitation of the Twitter API</p>
+       <p> <a href ="https://twitter.com/taariqismail">Taariq Ismail</a></p>
+ 
   </body>
+    
+    <script>
+    
+    
+
+function copyText() {
+  var range, selection, worked;
+
+    element = document.getElementById("myInput")
+    
+  if (document.body.createTextRange) {
+    range = document.body.createTextRange();
+    range.moveToElementText(element);
+    range.select();
+  } else if (window.getSelection) {
+    selection = window.getSelection();        
+    range = document.createRange();
+    range.selectNodeContents(element);
+    selection.removeAllRanges();
+    selection.addRange(range);
+  }
+  
+  try {
+    document.execCommand('copy');
+      
+  var tooltip = document.getElementById("myTooltip");
+    tooltip.innerHTML = "Copied"
+    
+    var tooltiptext = document.getElementById("tooltiptext");
+    tooltip.style.display = "block"
+  
+    
+  }
+  catch (err) {
+    alert('unable to copy text');
+  }
+    
+}
+        
+    </script>
 </html>
