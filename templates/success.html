@@ -12,7 +12,6 @@
         <h1>Twittercomp</h1>
         <div style="margin-bottom: 15px;">
       {% if winners %}
-        <br>
         <h3>Results</h3>
             <p><span class="tooltiptext" id="myTooltip" style="display:none;"></span></p>
       <p class="message" id="myInput" style=" background: #E3EFFF;"><button type="button" class ="copy-icon" onclick = "copyText()"></button>{{ winners | safe }}</p>
@@ -52,13 +51,14 @@ function copyText() {
   
   try {
     document.execCommand('copy');
+    selection.removeAllRanges();
       
   var tooltip = document.getElementById("myTooltip");
     tooltip.innerHTML = "Copied"
     
     var tooltiptext = document.getElementById("tooltiptext");
     tooltip.style.display = "block"
-  
+
     
   }
   catch (err) {
