@@ -1,9 +1,9 @@
 * {
 	box-sizing: border-box;
-	-webkit-appearance: none;
 	margin: 0;
 	padding: 0;
-  color: #1a1f36;
+    -webkit-appearance: none;
+  color: #1a1f36; 
   box-sizing: border-box;
   word-wrap: break-word;
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,sans-serif;
@@ -13,7 +13,20 @@ body {
 	background: white;
 	font-family: Arial, Helvetica, sans-serif;
 	line-height: 1.6;
-    color: linear-gradient(white 0%, rgb(247, 250, 252) 33%); flex-grow: 1;
+    color: linear-gradient(white 0%, rgb(247, 250, 252) 33%); flex-grow: 1; 
+}
+
+p {
+    
+    text-align: center;
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+
+p.normal {
+    
+    text-align: center;
+font-weight: 200;
 }
 
 h1 {
@@ -52,6 +65,15 @@ img {
 	margin-top: 0rem; 
 }
 
+.results {
+	text-align: center;
+	padding: 5px;
+    color: blue;
+	border: #ccc dotted 2px;
+	margin-top: 0rem;
+    margin-bottom: 20px;
+}
+
 .logo {
 	width: 300px;
 	display: block;
@@ -88,8 +110,8 @@ textarea {
 */
 
 .btn {
-    -webkit-appearance: none;	
     background-color: rgb(84, 105, 212);
+   
     color: #fff;
     font-weight: 600;
     cursor: pointer;
@@ -128,3 +150,87 @@ textarea {
                 rgba(0, 0, 0, 0) 0px 0px 0px 0px, 
                 rgba(0, 0, 0, 0) 0px 0px 0px 0px;
 }
+
+
+.cc-selector input{
+    margin:0;padding:0;
+    -webkit-appearance:none;
+       -moz-appearance:none;
+            appearance:none;
+}
+.visa{background-image:url(retweet1.png);}
+.mastercard{background-image:url(like1.png);}
+
+.cc-selector input:active +.drinkcard-cc{opacity: .9;}
+.cc-selector input:checked +.drinkcard-cc{
+    -webkit-filter: none;
+       -moz-filter: none;
+            filter: none;
+}
+
+.cc-selector input:active +.drinkcard-cc2{opacity: .9;}
+.cc-selector input:checked +.drinkcard-cc2{
+    -webkit-filter: none;
+       -moz-filter: none;
+            filter: none;
+}
+
+
+.drinkcard-cc{
+    cursor:pointer;
+    text: center;
+    border-radius: 6px;
+    background-color: #e0f1e9; /* #f7e2e7 */
+    background-position: center center;
+    background-size:contain;
+    background-repeat:no-repeat;
+    border: 1px solid #ccc;
+    display:inline-block;
+    width: 48%;
+    height: 100px;
+     -webkit-transition: all 100ms ease-in;
+       -moz-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+    -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
+       -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
+            filter: brightness(1.8) grayscale(1) opacity(.7);
+}
+
+.drinkcard-cc2{
+    cursor:pointer;
+    text: center;
+    border-radius: 6px;
+    background-color: #f7e2e7;
+    background-position: center center;
+    background-size:contain;
+    background-repeat:no-repeat;
+    border: 1px solid #ccc;
+    display:inline-block;
+    width: 48%;
+    height: 100px;
+     -webkit-transition: all 100ms ease-in;
+       -moz-transition: all 100ms ease-in;
+            transition: all 100ms ease-in;
+    -webkit-filter: brightness(1.8) grayscale(1) opacity(.7);
+       -moz-filter: brightness(1.8) grayscale(1) opacity(.7);
+            filter: brightness(1.8) grayscale(1) opacity(.7);
+}
+
+
+.drinkcard-cc:hover{
+    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+       -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+            filter: brightness(1.2) grayscale(.5) opacity(.9);
+}
+
+.drinkcard-cc2:hover{
+    -webkit-filter: brightness(1.2) grayscale(.5) opacity(.9);
+       -moz-filter: brightness(1.2) grayscale(.5) opacity(.9);
+            filter: brightness(1.2) grayscale(.5) opacity(.9);
+}
+
+
+/* Extras 
+a:visited{color:#888}*/
+a{color:#444;text-decoration:none;}
+p{margin-bottom:.3em;}
