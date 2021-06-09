@@ -8,19 +8,39 @@
     <title>Twitter competitions - free and easy</title>
   </head>
   <body>
+      
+      
+       
+      
     <div class="container">
        <h1>Twittercomp</h1>
-
-      {% if message %}
-      <p class="message">{{ message | safe }}</p>
-      {% endif %}
+        <p>Select competition type. Paste tweet. Choose number of winners</p>
+        
+        
       <form action="/submit" method="POST">
+        
+                   
+          
+
+<div class="cc-selector" style = "text-align: center;">
+        <input id="visa" type="radio" name="credit-card" value="visa" checked = true />
+        <label class="drinkcard-cc visa" for="visa"></label>
+        <input id="mastercard" type="radio" name="credit-card" value="mastercard" />
+        <label class="drinkcard-cc2 mastercard"for="mastercard"></label>
+    </div>
+          
         <div class="field form-group">
+            
+  
+
     <!--      <h3>Tweet URL</h3> -->
           <input
             type="text"
             name="tweet"
             placeholder="Tweet URL"
+            pattern = ".*twitter.com/.*"
+            oninvalid="this.setCustomValidity('Invalid Tweet URL')"
+            oninput="this.setCustomValidity('')"
             style="width:100%; font-size: 1.2rem; padding: 0.4rem;"      
           />
         </div>
@@ -39,8 +59,9 @@
                 <input type="submit" value="Get lucky winners" class="btn" />
       </form>
         
-
         
     </div>
+      
+      <p class = "normal"> Will add something here about etc</p>
   </body>
 </html>
