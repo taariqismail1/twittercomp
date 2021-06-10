@@ -38,6 +38,7 @@
             type="text"
             name="tweet"
             placeholder="Tweet URL"
+            required     
             pattern = ".*twitter.com/.*"
             oninvalid="this.setCustomValidity('Invalid Tweet URL')"
             oninput="this.setCustomValidity('')"
@@ -49,6 +50,7 @@
           <input
             type="number"
             name="numberWinners"
+            required
             min="1"
             max="100"
             style="width:100%; font-size: 1.2rem; padding: 0.4rem;"     
