@@ -196,6 +196,8 @@ input[type="radio"] {
     text: center;
     border-radius: 6px;
     margin-left: 0px;
+    position: relative;
+left: -6px;
     background-color: #e0f1e9; /* #f7e2e7 */
     background-position: center center;
     background-size:contain;
@@ -216,6 +218,8 @@ input[type="radio"] {
     cursor:pointer;
     text: center;
     border-radius: 6px;
+        position: relative;
+right: -6px;
     background-color: #f7e2e7;
     background-position: center center;
     background-size:80px;
@@ -291,7 +295,7 @@ button {
     padding: 1px 6px;
     border-width: 2px;
     border-style: outset;
-    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+  /*  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133)); */
     border-image: initial;
 }
 
@@ -334,4 +338,3 @@ span#myTooltip.tooltiptext {
   border-style: solid;
   border-color: #555 transparent transparent transparent; */
 }
-
